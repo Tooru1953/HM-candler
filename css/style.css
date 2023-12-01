@@ -35,6 +35,47 @@ button {
   cursor: pointer;
 }
 
+.button {
+  padding: 18px 54px;
+  background: #ffbd59;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.title {
+  margin-bottom: 15px;
+  font-size: 40px;
+}
+
+.section {
+  padding-bottom: 150px;
+}
+
+.section--decor {
+  position: relative;
+}
+
+.section--decor::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: url(/images/section-decor.png);
+  width: 22px;
+  height: 30px;
+}
+
+.section--decor::after {
+  content: "";
+  position: absolute;
+  left: 22px;
+  bottom: 13px;
+  background-color: #7b6152;
+  width: 1000%;
+  height: 1px;
+}
+
 .container {
   max-width: 1180px;
   padding-left: 10px;
@@ -113,6 +154,7 @@ button {
   font-size: 30px;
   font-family: "Yeseva One", serif;
   margin-bottom: 15px;
+  font-weight: 400;
 }
 
 .top__text {
@@ -137,6 +179,7 @@ button {
   background-color: #a5978e;
   padding: 50px 0;
   color: #fafafa;
+  margin-bottom: 150px;
 }
 
 .about__inner {
@@ -146,11 +189,6 @@ button {
 
 .about__content {
   min-width: 370px;
-}
-
-.about__title {
-  margin-bottom: 15px;
-  font-size: 40px;
 }
 
 .about__text {
@@ -164,30 +202,6 @@ button {
   align-items: center;
   gap: 0 20px;
   flex-basis: 930px;
-  position: relative;
-}
-
-.about__list::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-image: url(/images/about-decor.png);
-  width: 22px;
-  height: 30px;
-}
-
-.about__list::after {
-  content: "";
-  position: absolute;
-  left: 22px;
-  bottom: 13px;
-  background-color: #7b6152;
-  width: 1000%;
-  height: 1px;
-}
-
-.about__item {
 }
 
 .about__item-img {
@@ -196,6 +210,54 @@ button {
 
 .about__item-text {
   font-size: 11px;
+}
+
+.products {
+}
+
+.section__inner {
+  display: grid;
+  grid-template-columns: 370px auto;
+}
+
+.section__content-descr {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-bottom: 92px;
+}
+.products__title {
+}
+
+.products__text {
+}
+.section__text {
+}
+.products__content {
+  gap: 50px 90px;
+}
+.products__item {
+  width: 290px;
+  margin: 0 auto;
+  text-align: center;
+}
+.products__item-img {
+  margin-bottom: 8px;
+}
+.products__item-price {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-family: "Yeseva One", serif;
+  font-weight: 400;
+}
+.products__item-title {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-family: "Yeseva One", serif;
+  font-weight: 400;
+}
+.products__item-text {
+  margin-bottom: 27px;
+  font-size: 12px;
 }
 
 .footer {
@@ -248,6 +310,16 @@ button {
   .about__list {
     padding-left: 20px;
   }
+  .section__inner {
+    grid-template-columns: 290px auto;
+    gap: 0 10px;
+  }
+  .products__content {
+    gap: 67px;
+  }
+  .section__text {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -261,6 +333,13 @@ button {
   }
   .footer__social {
     justify-content: center;
+  }
+  .section__inner {
+    grid-template-columns: 200px auto;
+    gap: 0 10px;
+  }
+  .products__content {
+    gap: 30px 16px;
   }
 }
 
@@ -321,6 +400,31 @@ button {
   .about__item-img--3 {
     width: 120px;
   }
+  .products__item {
+    width: 200px;
+  }
+  .products__item-img {
+    width: 200px;
+    margin-bottom: 6px;
+  }
+  .button {
+    font-size: 12px;
+  }
+  .products__item-text {
+    font-size: 8px;
+    margin-bottom: 18px;
+  }
+  .products__item-price {
+    font-size: 12px;
+    margin-bottom: 7px;
+  }
+  .products__item-title {
+    font-size: 12px;
+    margin-bottom: 9px;
+  }
+  .button {
+    padding: 10px 26px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -349,6 +453,13 @@ button {
   }
   .header__menu {
     order: 1;
+  }
+  .section__inner {
+    display: block;
+  }
+  .section__descr {
+    margin-bottom: 30px;
+    text-align: center;
   }
 }
 
@@ -415,6 +526,19 @@ button {
   .about__inner {
     align-items: flex-end;
   }
+  .about {
+    margin-bottom: 50px;
+  }
+  .section {
+    padding-bottom: 50px;
+  }
+  .section__content-descr {
+    padding-bottom: 62px;
+  }
+  .section__descr {
+    margin: 0 auto 30px;
+    width: 300px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -456,5 +580,32 @@ button {
   }
   .about__item-img--2 {
     display: none;
+  }
+  .section__descr {
+    margin: 0 auto 25px;
+    width: 235px;
+  }
+  .products__item {
+    width: 150px;
+  }
+  .products__content {
+    gap: 40px 7px;
+  }
+  .products__item-img {
+    width: 150px;
+  }
+  .button {
+    font-size: 8px;
+    padding: 8px 20px;
+  }
+  .products__item-price {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+  .products__item-title {
+    font-size: 10px;
+  }
+  .products__item-text {
+    margin-bottom: 16px;
   }
 }
